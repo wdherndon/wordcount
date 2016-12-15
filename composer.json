@@ -1,5 +1,5 @@
 {
-    "name": "herndon/wordcount",
+    "name": "wdherndon/wordcount",
     "type": "phpbb-extension",
     "description": "Show word count for each post and in preview",
     "homepage": "http://www.softwareschmiede-herndon.de/phpbb/wordcount",

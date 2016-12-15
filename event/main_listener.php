@@ -9,7 +9,7 @@
  *
  */
 
-namespace herndon\wordcount\event;
+namespace wdherndon\wordcount\event;
 
 /**
  * @ignore
@@ -62,7 +62,7 @@ class main_listener implements EventSubscriberInterface
 	{
 		$lang_set_ext = $event['lang_set_ext'];
 		$lang_set_ext[] = array(
-			'ext_name' => 'herndon/wordcount',
+			'ext_name' => 'wdherndon/wordcount',
 			'lang_set' => 'common',
 		);
 		$event['lang_set_ext'] = $lang_set_ext;

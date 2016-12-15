@@ -7,7 +7,7 @@
  *
  */
 
-namespace towen\editlog;
+namespace wdherndon\wordcount;
 
 /**
 * @ignore

@@ -1,6 +1,6 @@
 services:
-    herndon.wordcount.listener:
-        class: herndon\wordcount\event\main_listener
+    wdherndon.wordcount.listener:
+        class: wdherndon\wordcount\event\main_listener
         arguments:
             - '@controller.helper'
             - '@template'
