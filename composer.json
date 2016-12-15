@@ -2,9 +2,9 @@
     "name": "wdherndon/wordcount",
     "type": "phpbb-extension",
     "description": "Show word count for each post and in preview",
-    "homepage": "http://www.softwareschmiede-herndon.de/phpbb/wordcount",
+    "homepage": "http://www.softwareschmiede-herndon.de/",
     "version": "1.0.0",
-    "time": "2016-10-30",
+    "time": "2016-12-15",
     "license": "GPL-2.0",
     "authors": [
         {
