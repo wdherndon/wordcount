@@ -2,7 +2,7 @@
     "name": "wdherndon/wordcount",
     "type": "phpbb-extension",
     "description": "Show word count for each post and in preview",
-    "homepage": "http://www.softwareschmiede-herndon.de/",
+    "homepage": "https://www.softwareschmiede-herndon.de/wordcount-en.html",
     "version": "1.0.0",
     "time": "2016-12-15",
     "license": "GPL-2.0",
@@ -10,7 +10,7 @@
         {
             "name": "William D. Herndon",
             "email": "wdh@softwareschmiede-herndon.de",
-            "homepage": "http://www.softwareschmiede-herndon.de",
+            "homepage": "https://www.softwareschmiede-herndon.de",
             "role": ""
         }
     ],
