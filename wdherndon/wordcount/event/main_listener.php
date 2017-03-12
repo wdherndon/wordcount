@@ -30,9 +30,6 @@ class main_listener implements EventSubscriberInterface
 		);
 	}
 
-	/* @var \phpbb\controller\helper */
-	protected $helper;
-
 	/* @var \phpbb\template\template */
 	protected $template;
 
@@ -42,13 +39,11 @@ class main_listener implements EventSubscriberInterface
 	/**
 	 * Constructor
 	 *
-	 * @param \phpbb\controller\helper	$helper		Controller helper object
 	 * @param \phpbb\template\template	$template	Template object
 	 * @param \phpbb\user				 $user
 	 */
-	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\user $user)
+	public function __construct(\phpbb\template\template $template, \phpbb\user $user)
 	{
-		$this->helper = $helper;
 		$this->template = $template;
 		$this->user = $user;
 	}
@@ -78,8 +73,6 @@ class main_listener implements EventSubscriberInterface
 	public function count_words($message)
 	{
 		$count = 0;
-		$in_tag = false;
-		$in_html_char = false;
 		$inbetween_words = true;
 		$msg_len = strlen($message);
 		for ($ii = 0; $ii < $msg_len; $ii++)
@@ -92,7 +85,9 @@ class main_listener implements EventSubscriberInterface
 			else
 			{
 				if ($inbetween_words)
+				{
 					$count = $count + 1;
+				}
 				$inbetween_words = false;
 			}
 		}
@@ -110,8 +105,6 @@ class main_listener implements EventSubscriberInterface
 	{
 		$retval = '';
 		$in_tag = false;
-		$in_html_char = false;
-		$inbetween_words = true;
 		$msg_len = strlen($message);
 		for ($ii = 0; $ii < $msg_len; $ii++)
 		{
@@ -119,12 +112,10 @@ class main_listener implements EventSubscriberInterface
 			if ($c == '<')
 			{
 				$in_tag = true;
-				$in_html_char = false;
 			}
 			else if ($c == '>')
 			{
 				$in_tag = false;
-				$in_html_char = false;
 			}
 			else if (!$in_tag)
 			{
@@ -147,7 +138,6 @@ class main_listener implements EventSubscriberInterface
 	{
 		$retval = '';
 		$in_tag = false;
-		$inbetween_words = true;
 		$msg_len = strlen($message);
 		for ($ii = 0; $ii < $msg_len; $ii++)
 		{

@@ -2,7 +2,6 @@ services:
     wdherndon.wordcount.listener:
         class: wdherndon\wordcount\event\main_listener
         arguments:
-            - '@controller.helper'
             - '@template'
             - '@user'
         tags:
